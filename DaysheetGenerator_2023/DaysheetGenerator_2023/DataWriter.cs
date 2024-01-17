@@ -64,7 +64,7 @@ namespace DaysheetGenerator_2023
 
 
                 }
-                //Console.WriteLine("Finished");
+                
             }
             
 
@@ -188,15 +188,12 @@ namespace DaysheetGenerator_2023
                 }
 
                 Dictionary<string, string>.KeyCollection keys = ohipFellows.Keys;
-                foreach (string key in keys)
-                {
-                    //Console.WriteLine("key: {0}", key);
-                }
-                //Console.WriteLine(ohipFellows.);
+               
+               
 
                 if (ohipFellows.ContainsKey(rowData[2]))
                 {
-                    //Console.WriteLine(rowData[2]);
+                    
                     cell = row.GetCell(4);
                     cell.SetCellValue(ohipFellows[rowData[2]]);
                 }
@@ -220,7 +217,7 @@ namespace DaysheetGenerator_2023
 
             foreach (List<string> rowData in residents)
             {
-                //Console.WriteLine(rowData[2]);
+                
 
                 IRow row = sheet.GetRow(_residents);
                 ICell cell = row.GetCell(0);
