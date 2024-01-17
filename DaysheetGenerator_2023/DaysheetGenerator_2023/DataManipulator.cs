@@ -103,7 +103,7 @@ namespace DaysheetGenerator_2023
                 { 
                     if (_assignmentsToNotes.ContainsKey(inputAssignment)) 
                     {
-                        // Console.WriteLine(inputAssignment + " " + _assignmentsToNotes[inputAssignment] );
+                        
                         outputNotes += "|" + _assignmentsToNotes[inputAssignment];
                     }
                     else 
@@ -113,9 +113,8 @@ namespace DaysheetGenerator_2023
                 }
                 _data[row][3] = outputAssignments.Trim('|');
                 _data[row][4] += outputNotes.Trim('|');
-                //_data[row][4] = _data[row][4].Trim('\n');
                 _data[row][4] = _data[row][4].Replace("\n", "");
-                //Console.WriteLine(_data[row][4]);
+                
             }
            
         }
@@ -132,7 +131,7 @@ namespace DaysheetGenerator_2023
                     if (_addNotes.ContainsKey(inputAssignment))
                     {
                         outputNotes += "|" + _addNotes[inputAssignment];
-                        //Console.WriteLine(outputNotes);
+                        
                     }
                 }
                 _data[row][4] += outputNotes;
@@ -146,10 +145,10 @@ namespace DaysheetGenerator_2023
             { 
                 if (_fellowNotes.ContainsKey(_data[row][2].Trim()))
                 {
-                    //Console.WriteLine(_data[row][4]);
+                    
                     _data[row][4] = _fellowNotes[_data[row][2].Trim()] + "|" + _data[row][4];
                     _data[row][4] = _data[row][4].Trim('|');
-                    //Console.WriteLine(_data[row][4]);
+                    
                 }
             }
            
