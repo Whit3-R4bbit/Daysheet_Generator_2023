@@ -62,16 +62,12 @@ namespace DaysheetGenerator_2023
         {
             List<List<string>> orderedResidents = new List<List<string>>();
 
-            //Console.WriteLine(residentOrdering.Count);
             foreach (string resident in  residentOrdering)
-            {
-
-                //Console.WriteLine(resident);
+            { 
                 foreach (List<string> row in _residents)
                 {
                     if (resident == row[2])
                     {
-                        //Console.WriteLine(row[2]);
                         orderedResidents.Add(row);
                     }
                 }
