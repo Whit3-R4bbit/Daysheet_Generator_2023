@@ -36,7 +36,7 @@ namespace DaysheetGenerator_2023
                 sheetRow.Add(sheet.GetRow(row).GetCell(3).ToString());
                 sheetRow.Add(sheet.GetRow(row).GetCell(4).ToString());
                 sheetRow.Add(sheet.GetRow(row).GetCell(5).ToString());
-                //Console.WriteLine(sheet.GetRow(row).GetCell(2).ToString());
+                
                 
                 string dateString = sheet.GetRow(row).GetCell(6).ToString();
                 DateTime dateTimeDay = DateTime.Parse(dateString);
@@ -80,7 +80,7 @@ namespace DaysheetGenerator_2023
                     }
                     else if (sheet.GetRow(row).GetCell(1) != null)
                     {
-                        //Console.WriteLine(sheet.GetRow(row).GetCell(0).ToString() + " " + sheet.GetRow(row).GetCell(1).ToString());
+                        
                         keyValuePairs.Add(sheet.GetRow(row).GetCell(0).ToString(), sheet.GetRow(row).GetCell(1).ToString());
                     }
                     else
@@ -115,21 +115,21 @@ namespace DaysheetGenerator_2023
 
                 if (sheet.GetRow(row) != null)
                 {
-                    Console.WriteLine("Hello");
+                   
 
                     if (sheet.GetRow(row).GetCell(0) == null)
                     {
-                        Console.WriteLine("Hello1");
+                        
                         break;
                     }
                     if (sheet.GetRow(row).GetCell(0).StringCellValue == "")
                     {
-                        Console.WriteLine("Hello2");
+                        
                         break;
                     }
                     else if (sheet.GetRow(row).GetCell(0) != null)
                     {
-                        Console.WriteLine("Hello3");
+                        
                         residents.Add(sheet.GetRow(row).GetCell(0).ToString());
                     }
                     
