@@ -42,7 +42,7 @@ namespace DaysheetGenerator_2023
                     }
 
                 }
-                //Console.WriteLine(thirdCall + " " + fourthCall);
+                
                 
             }
 
